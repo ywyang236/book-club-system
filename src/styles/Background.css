@@ -1,16 +1,4 @@
-:root {
-    --dark-color: hsl(var(--hue), 100%, 9%);
-    --light-color: hsl(var(--hue), 95%, 98%);
-    --base: hsl(var(--hue), 95%, 50%);
-    --complimentary1: hsl(var(--hue-complimentary1), 95%, 50%);
-    --complimentary2: hsl(var(--hue-complimentary2), 95%, 50%);
-
-    --font-family: "Poppins", system-ui;
-
-    --bg-gradient: linear-gradient(to bottom,
-            hsl(var(--hue), 95%, 99%),
-            hsl(var(--hue), 95%, 84%));
-}
+:root {}
 
 * {
     margin: 0;
@@ -24,14 +12,25 @@ html {
 }
 
 body {
+    --dark-color: hsl(var(--hue), 100%, 9%);
+    --light-color: hsl(var(--hue), 95%, 98%);
+    --base: hsl(var(--hue), 95%, 50%);
+    --complimentary1: hsl(var(--hue-complimentary1), 95%, 50%);
+    --complimentary2: hsl(var(--hue-complimentary2), 95%, 50%);
+
+    --font-family: "Poppins", system-ui;
+
+    --bg-gradient: linear-gradient(to bottom,
+            hsl(var(--hue), 95%, 99%),
+            hsl(var(--hue), 95%, 84%));
+
+    background-image: var(--bg-gradient);
+    color: var(--dark-color);
     max-width: 1920px;
     min-height: 100vh;
     display: grid;
     place-items: center;
     padding: 2rem;
-    font-family: var(--font-family);
-    color: var(--dark-color);
-    background: var(--bg-gradient);
 }
 
 .orb-canvas {
@@ -55,7 +54,7 @@ strong {
     padding: 8rem 6rem;
     display: flex;
     align-items: center;
-    background: rgba(255, 255, 255, 0.375);
+    background: rgba(255, 255, 255, 0.7);
     box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
     border-radius: 2rem;
     border: 1px solid rgba(255, 255, 255, 0.125);
@@ -114,7 +113,7 @@ a {
 
 @media only screen and (max-width: 840px) {
     body {
-        padding: 1.5rem;
+        padding: 10px;
     }
 
     .overlay {

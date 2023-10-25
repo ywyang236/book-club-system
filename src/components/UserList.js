@@ -18,15 +18,15 @@ function calculateTotalPoints(user, week) {
 }
 
 // 計算與上週差異的函數
-function calculateDifferenceFromLastWeek(user, week) {
-    if (week === 1) {
-        return null;
-    }
-    const currentWeekPoints = calculateTotalPoints(user, week);
-    const lastWeekPoints = week > 1 ? calculateTotalPoints(user, week - 1) : 0;
-    const difference = currentWeekPoints - lastWeekPoints;
-    return difference !== 0 ? difference : null;
-}
+// function calculateDifferenceFromLastWeek(user, week) {
+//     if (week === 1) {
+//         return null;
+//     }
+//     const currentWeekPoints = calculateTotalPoints(user, week);
+//     const lastWeekPoints = week > 1 ? calculateTotalPoints(user, week - 1) : 0;
+//     const difference = currentWeekPoints - lastWeekPoints;
+//     return difference !== 0 ? difference : null;
+// }
 
 
 function UserList() {
@@ -202,7 +202,7 @@ function UserList() {
                 name: "fish",
                 photoPath: "gs://book-club-system.appspot.com/user_image/10_yuu0210_.jpeg",
                 data: {
-                    1: { notes: 2, comments: 0, activities: 0, exercises: 1 },
+                    1: { notes: 3, comments: 0, activities: 0, exercises: 1 },
                     2: { notes: 0, comments: 0, activities: 0, exercises: 0 },
                     3: { notes: 0, comments: 0, activities: 0, exercises: 0 },
                     4: { notes: 0, comments: 0, activities: 0, exercises: 0 },

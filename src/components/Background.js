@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import '../styles/Background.css';
-import * as PIXI from "https://cdn.skypack.dev/pixi.js@5.x";
-import { KawaseBlurFilter } from "https://cdn.skypack.dev/@pixi/filter-kawase-blur@3.2.0";
-import SimplexNoise from "https://cdn.skypack.dev/simplex-noise@3.0.0";
-import hsl from "https://cdn.skypack.dev/hsl-to-hex";
-import debounce from "https://cdn.skypack.dev/debounce";
+import * as PIXI from "pixi.js";
+import { KawaseBlurFilter } from "@pixi/filter-kawase-blur";
+import { createNoise2D } from "simplex-noise";
+import hsl from "hsl-to-hex";
+import debounce from "debounce";
 
 
 function Background(props) {
@@ -17,7 +17,7 @@ function Background(props) {
             return ((n - start1) / (end1 - start1)) * (end2 - start2) + start2;
         }
 
-        const simplex = new SimplexNoise();
+        const noise2D = createNoise2D(Math.random);
 
         class ColorPalette {
             constructor() {
@@ -104,9 +104,9 @@ function Background(props) {
             }
 
             update() {
-                const xNoise = simplex.noise2D(this.xOff, this.xOff);
-                const yNoise = simplex.noise2D(this.yOff, this.yOff);
-                const scaleNoise = simplex.noise2D(this.xOff, this.yOff);
+                const xNoise = noise2D(this.xOff, this.xOff);
+                const yNoise = noise2D(this.yOff, this.yOff);
+                const scaleNoise = noise2D(this.xOff, this.yOff);
 
                 this.x = map(xNoise, -1, 1, this.bounds["x"].min, this.bounds["x"].max);
                 this.y = map(yNoise, -1, 1, this.bounds["y"].min, this.bounds["y"].max);
