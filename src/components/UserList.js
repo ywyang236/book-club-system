@@ -557,16 +557,10 @@ function UserList() {
                         "activities": 0
                     },
                     "5": {
-                        "notes": 0,
-                        "comments": 0,
-                        "exercises": 0,
-                        "activities": 0
+                        "notes": 0, "comments": 0, "exercises": 0, "activities": 0
                     },
                     "6": {
-                        "notes": 0,
-                        "comments": 0,
-                        "exercises": 0,
-                        "activities": 0
+                        "notes": 0, "comments": 0, "exercises": 0, "activities": 0
                     }
                 }
             },
@@ -586,48 +580,27 @@ function UserList() {
     return (
         <div className="container">
             <Navbar onWeekSelect={setWeekDirectly} />
-            <div className="table">
-                <table>
-                    <tbody>
-                        <tr>
-                            <th></th>
-                            <th>暱稱</th>
-                            <th>筆記</th>
-                            <th>留言</th>
-                            <th>運動</th>
-                            <th>活動</th>
-                            <th>積分</th>
-                            {/* <th>與上週差異</th>
-                            <th>目前累積積分</th>
-                            <th>成就</th> */}
-                        </tr>
-                        {users.map(user => (
-                            <tr key={user.name}>
-                                <td><img src={user.photoUrl} alt={user.name} style={{ width: "40px", height: "40px", borderRadius: "50%", marginRight: "10px" }} /></td>
-                                <td>{user.name}</td>
-                                <td>{user.data[week]?.notes || 0}</td>
-                                <td>{user.data[week]?.comments || 0}</td>
-                                <td>{user.data[week]?.exercises || 0}</td>
-                                <td>{user.data[week]?.activities || 0}</td>
-                                <td>{calculateTotalPoints(user, week)}</td>
-                                {/* <td>{
-                                    (() => {
-                                        const difference = calculateDifferenceFromLastWeek(user, week);
-                                        if (difference === null) {
-                                            return null; // 不顯示差異值
-                                        }
-                                        return (
-                                            <span style={{ color: difference > 0 ? "green" : "blue" }}>
-                                                {difference > 0 ? `+${difference}` : difference}
-                                            </span>
-                                        );
-                                    })()
-                                }</td>
-                                <td></td> */}
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
+            <div className="user-list">
+                <div className="header-row">
+                    <div className='photo'>　　</div>
+                    <div>暱稱</div>
+                    <div>筆記</div>
+                    <div>留言</div>
+                    <div>運動</div>
+                    <div>活動</div>
+                    <div>積分</div>
+                </div>
+                {users.map(user => (
+                    <div className="user-row" key={user.name}>
+                        <div><img src={user.photoUrl} alt={user.name} /></div>
+                        <div>{user.name}</div>
+                        <div>{user.data[week]?.notes || 0}</div>
+                        <div>{user.data[week]?.comments || 0}</div>
+                        <div>{user.data[week]?.exercises || 0}</div>
+                        <div>{user.data[week]?.activities || 0}</div>
+                        <div>{calculateTotalPoints(user, week)}</div>
+                    </div>
+                ))}
             </div>
         </div>
     );
