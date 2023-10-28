@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect } from 'react';
 import '../styles/Background.css';
 import * as PIXI from "pixi.js";
