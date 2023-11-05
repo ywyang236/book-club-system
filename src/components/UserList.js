@@ -6,7 +6,7 @@ import { ref, getDownloadURL } from 'firebase/storage';
 import { storage } from '../firebase';
 import Navbar from './Navbar';
 import '../styles/UserList.css';
-import { sampleUsers } from '../data/usersData';
+import { fetchUsersData } from '../data/usersData';
 
 
 // 計算總積分的函數
@@ -20,15 +20,15 @@ function calculateTotalPoints(user, week) {
 }
 
 // 計算與上週差異的函數
-// function calculateDifferenceFromLastWeek(user, week) {
-//     if (week === 1) {
-//         return null;
-//     }
-//     const currentWeekPoints = calculateTotalPoints(user, week);
-//     const lastWeekPoints = week > 1 ? calculateTotalPoints(user, week - 1) : 0;
-//     const difference = currentWeekPoints - lastWeekPoints;
-//     return difference !== 0 ? difference : null;
-// }
+function calculateDifferenceFromLastWeek(user, week) {
+    if (week === 1) {
+        return null;
+    }
+    const currentWeekPoints = calculateTotalPoints(user, week);
+    const lastWeekPoints = week > 1 ? calculateTotalPoints(user, week - 1) : 0;
+    const difference = currentWeekPoints - lastWeekPoints;
+    return difference !== 0 ? difference : null;
+}
 
 
 function UserList() {
@@ -43,14 +43,16 @@ function UserList() {
 
     useEffect(() => {
         // 使用者資料包含每週的數據
-        const promises = sampleUsers.map(async user => {
-            const url = await getDownloadURL(ref(storage, user.photoPath));
-            return { ...user, photoUrl: url };
-        });
+        fetchUsersData().then(fetchedUsers => {
+            const promises = fetchedUsers.map(async user => {
+                const url = await getDownloadURL(ref(storage, user.photoPath));
+                return { ...user, photoUrl: url };
+            });
 
-        Promise.all(promises).then(updatedUsers => {
-            updatedUsers.sort((a, b) => calculateTotalPoints(b, week) - calculateTotalPoints(a, week)); // 這裡進行排序
-            setUsers(updatedUsers);
+            Promise.all(promises).then(updatedUsers => {
+                updatedUsers.sort((a, b) => calculateTotalPoints(b, week) - calculateTotalPoints(a, week)); // 這裡進行排序
+                setUsers(updatedUsers);
+            });
         });
     }, [week]);
 
@@ -66,6 +68,7 @@ function UserList() {
                     <div>運動</div>
                     <div>活動</div>
                     <div>積分</div>
+                    <div>與上週差異</div>
                 </div>
                 {users.map(user => (
                     <div className="user-row" key={user.name}>
@@ -76,6 +79,20 @@ function UserList() {
                         <div>{user.data[week]?.exercises || 0}</div>
                         <div>{user.data[week]?.activities || 0}</div>
                         <div>{calculateTotalPoints(user, week)}</div>
+                        <div>{
+                            (() => {
+                                const difference = calculateDifferenceFromLastWeek(user, week);
+                                if (difference === null) {
+                                    return null;
+                                }
+                                return (
+                                    <span style={{ color: difference > 0 ? "green" : "blue" }}>
+                                        {difference > 0 ? `+${difference}` : difference}
+                                    </span>
+                                );
+                            })()
+                        }
+                        </div>
                     </div>
                 ))}
             </div>

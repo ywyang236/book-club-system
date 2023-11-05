@@ -8,6 +8,7 @@ const OverlayBtns = styled.div`
     width: 100%;
     max-width: 30rem;
     display: flex;
+    justify-content: space-between;
 `;
 
 const OverlayBtn = styled.button`
@@ -25,6 +26,7 @@ const OverlayBtn = styled.button`
     transition: transform 150ms ease;
     outline-color: hsl(var(--hue), 95%, 50%);
     cursor: pointer;
+    margin-right: 5px;
 
     &:hover {
         transform: scale(1.05);

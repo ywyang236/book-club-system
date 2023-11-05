@@ -148,7 +148,6 @@ function Background(props) {
             orbs.push(orb);
         }
 
-        // Animate!
         if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
             app.ticker.add(() => {
                 orbs.forEach((orb) => {
@@ -163,7 +162,6 @@ function Background(props) {
             });
         }
 
-        // When the component is unmounted, we should cleanup our resources.
         return () => {
             app.ticker.stop();
 
@@ -173,15 +171,15 @@ function Background(props) {
 
             orbs.length = 0;
 
-            app.renderer.render(app.stage); // Clears the renderer
-            app.view.parentNode.removeChild(app.view); // Remove canvas from DOM
+            app.renderer.render(app.stage);
+            app.view.parentNode.removeChild(app.view);
             app.destroy({
-                children: true, // Default is false
+                children: true,
                 texture: true,
                 baseTexture: true
             });
         };
-    }, []); // Passing an empty array as dependency to useEffect makes it run only on mount and unmount, ensuring the canvas is initialized only once.
+    }, []);
 
     return <canvas className="orb-canvas" />;
 }
