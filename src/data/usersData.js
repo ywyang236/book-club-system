@@ -17,9 +17,9 @@ export const users = [
         "activities": 1
       },
       "3": {
-        "notes": 0,
+        "notes": 3,
         "comments": 0,
-        "exercises": 0,
+        "exercises": 1,
         "activities": 0
       },
       "4": {
@@ -101,7 +101,7 @@ export const users = [
         "activities": 1
       },
       "3": {
-        "notes": 0,
+        "notes": 4,
         "comments": 0,
         "exercises": 0,
         "activities": 0
@@ -169,48 +169,6 @@ export const users = [
     }
   },
   {
-    "name": "張 雅婷",
-    "photoPath": "gs://book-club-system.appspot.com/user_image/11_yating.chang.jpeg",
-    "data": {
-      "1": {
-        "notes": 4,
-        "comments": 0,
-        "exercises": 2,
-        "activities": 1
-      },
-      "2": {
-        "notes": 0,
-        "comments": 0,
-        "exercises": 0,
-        "activities": 1
-      },
-      "3": {
-        "notes": 0,
-        "comments": 0,
-        "exercises": 0,
-        "activities": 0
-      },
-      "4": {
-        "notes": 0,
-        "comments": 0,
-        "exercises": 0,
-        "activities": 0
-      },
-      "5": {
-        "notes": 0,
-        "comments": 0,
-        "exercises": 0,
-        "activities": 0
-      },
-      "6": {
-        "notes": 0,
-        "comments": 0,
-        "exercises": 0,
-        "activities": 0
-      }
-    }
-  },
-  {
     "name": "fish",
     "photoPath": "gs://book-club-system.appspot.com/user_image/10_yuu0210_.jpeg",
     "data": {
@@ -227,7 +185,7 @@ export const users = [
         "activities": 2
       },
       "3": {
-        "notes": 0,
+        "notes": 4,
         "comments": 0,
         "exercises": 0,
         "activities": 0
@@ -269,49 +227,7 @@ export const users = [
         "activities": 2
       },
       "3": {
-        "notes": 0,
-        "comments": 0,
-        "exercises": 0,
-        "activities": 0
-      },
-      "4": {
-        "notes": 0,
-        "comments": 0,
-        "exercises": 0,
-        "activities": 0
-      },
-      "5": {
-        "notes": 0,
-        "comments": 0,
-        "exercises": 0,
-        "activities": 0
-      },
-      "6": {
-        "notes": 0,
-        "comments": 0,
-        "exercises": 0,
-        "activities": 0
-      }
-    }
-  },
-  {
-    "name": "Ezra",
-    "photoPath": "gs://book-club-system.appspot.com/user_image/6_ilbas.jpeg",
-    "data": {
-      "1": {
-        "notes": 5,
-        "comments": 0,
-        "exercises": 3,
-        "activities": 1
-      },
-      "2": {
-        "notes": 0,
-        "comments": 0,
-        "exercises": 2,
-        "activities": 1
-      },
-      "3": {
-        "notes": 0,
+        "notes": 3,
         "comments": 0,
         "exercises": 0,
         "activities": 0
@@ -353,7 +269,7 @@ export const users = [
         "activities": 2
       },
       "3": {
-        "notes": 0,
+        "notes": 4,
         "comments": 0,
         "exercises": 0,
         "activities": 0
@@ -389,7 +305,7 @@ export const users = [
         "activities": 1
       },
       "2": {
-        "notes": 4,
+        "notes": 5,
         "comments": 0,
         "exercises": 0,
         "activities": 1
@@ -437,7 +353,7 @@ export const users = [
         "activities": 0
       },
       "3": {
-        "notes": 0,
+        "notes": 4,
         "comments": 0,
         "exercises": 0,
         "activities": 0
@@ -473,7 +389,7 @@ export const users = [
         "activities": 0
       },
       "2": {
-        "notes": 3,
+        "notes": 5,
         "comments": 0,
         "exercises": 0,
         "activities": 2
