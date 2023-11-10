@@ -101,7 +101,7 @@ export const users = [
         "activities": 1
       },
       "3": {
-        "notes": 4,
+        "notes": 5,
         "comments": 0,
         "exercises": 0,
         "activities": 0
@@ -185,7 +185,7 @@ export const users = [
         "activities": 2
       },
       "3": {
-        "notes": 4,
+        "notes": 5,
         "comments": 0,
         "exercises": 0,
         "activities": 0
@@ -227,7 +227,7 @@ export const users = [
         "activities": 2
       },
       "3": {
-        "notes": 3,
+        "notes": 4,
         "comments": 0,
         "exercises": 0,
         "activities": 0
@@ -269,7 +269,7 @@ export const users = [
         "activities": 2
       },
       "3": {
-        "notes": 4,
+        "notes": 5,
         "comments": 0,
         "exercises": 0,
         "activities": 0
@@ -353,7 +353,7 @@ export const users = [
         "activities": 0
       },
       "3": {
-        "notes": 4,
+        "notes": 5,
         "comments": 0,
         "exercises": 0,
         "activities": 0
