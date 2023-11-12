@@ -143,7 +143,7 @@ export const users = [
         "activities": 2
       },
       "3": {
-        "notes": 0,
+        "notes": 5,
         "comments": 0,
         "exercises": 0,
         "activities": 0
@@ -227,7 +227,7 @@ export const users = [
         "activities": 2
       },
       "3": {
-        "notes": 4,
+        "notes": 5,
         "comments": 0,
         "exercises": 0,
         "activities": 0
