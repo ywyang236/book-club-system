@@ -23,10 +23,10 @@ export const users = [
         "activities": 0
       },
       "4": {
-        "notes": 0,
+        "notes": 5,
         "comments": 0,
         "exercises": 0,
-        "activities": 0
+        "activities": 1
       },
       "5": {
         "notes": 0,
@@ -107,10 +107,10 @@ export const users = [
         "activities": 0
       },
       "4": {
-        "notes": 0,
+        "notes": 3,
         "comments": 0,
         "exercises": 0,
-        "activities": 0
+        "activities": 1
       },
       "5": {
         "notes": 0,
@@ -191,10 +191,10 @@ export const users = [
         "activities": 0
       },
       "4": {
-        "notes": 0,
+        "notes": 3,
         "comments": 0,
         "exercises": 0,
-        "activities": 0
+        "activities": 1
       },
       "5": {
         "notes": 0,
@@ -233,10 +233,10 @@ export const users = [
         "activities": 0
       },
       "4": {
-        "notes": 0,
+        "notes": 1,
         "comments": 0,
         "exercises": 0,
-        "activities": 0
+        "activities": 1
       },
       "5": {
         "notes": 0,
@@ -275,52 +275,10 @@ export const users = [
         "activities": 0
       },
       "4": {
-        "notes": 0,
-        "comments": 0,
-        "exercises": 0,
-        "activities": 0
-      },
-      "5": {
-        "notes": 0,
-        "comments": 0,
-        "exercises": 0,
-        "activities": 0
-      },
-      "6": {
-        "notes": 0,
-        "comments": 0,
-        "exercises": 0,
-        "activities": 0
-      }
-    }
-  },
-  {
-    "name": "AngelTsui",
-    "photoPath": "gs://book-club-system.appspot.com/user_image/13_angeltsui.jpeg",
-    "data": {
-      "1": {
-        "notes": 5,
-        "comments": 0,
-        "exercises": 1,
-        "activities": 1
-      },
-      "2": {
-        "notes": 5,
+        "notes": 3,
         "comments": 0,
         "exercises": 0,
         "activities": 1
-      },
-      "3": {
-        "notes": 0,
-        "comments": 0,
-        "exercises": 0,
-        "activities": 0
-      },
-      "4": {
-        "notes": 0,
-        "comments": 0,
-        "exercises": 0,
-        "activities": 0
       },
       "5": {
         "notes": 0,
@@ -359,7 +317,7 @@ export const users = [
         "activities": 0
       },
       "4": {
-        "notes": 0,
+        "notes": 1,
         "comments": 0,
         "exercises": 0,
         "activities": 0
@@ -395,7 +353,7 @@ export const users = [
         "activities": 2
       },
       "3": {
-        "notes": 0,
+        "notes": 5,
         "comments": 0,
         "exercises": 0,
         "activities": 0
@@ -404,7 +362,7 @@ export const users = [
         "notes": 0,
         "comments": 0,
         "exercises": 0,
-        "activities": 0
+        "activities": 1
       },
       "5": {
         "notes": 0,

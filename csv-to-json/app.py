@@ -41,7 +41,7 @@ def home():
         ".wenying": "Wenying",
         # "ilbas": "Ezra",
         "rouyu.": "肉魚",
-        "angeltsui": "AngelTsui",
+        # "angeltsui": "AngelTsui",
         "star533422": "JT Ho",
         "rororo": "rororo",
     }
@@ -53,7 +53,7 @@ def home():
         "LTR": "gs://book-club-system.appspot.com/user_image/7_lark1987.jpeg",
         "Lulu": "gs://book-club-system.appspot.com/user_image/1_lulu_cheng.jpeg",
         # "張 雅婷": "gs://book-club-system.appspot.com/user_image/11_yating.chang.jpeg",
-        "AngelTsui": "gs://book-club-system.appspot.com/user_image/13_angeltsui.jpeg",
+        # "AngelTsui": "gs://book-club-system.appspot.com/user_image/13_angeltsui.jpeg",
         "rororo": "gs://book-club-system.appspot.com/user_image/2_rororo.jpeg",
         "肉魚": "gs://book-club-system.appspot.com/user_image/3_rouyu.jpeg",
         "Wenying": "gs://book-club-system.appspot.com/user_image/5_wenying.jpeg",
